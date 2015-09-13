@@ -1,0 +1,15 @@
+<div class="container">
+	<div class="row">
+		<% @artists.each do |artist| %>
+			<div class="col-md-4">
+				<div class="panel panel-default">
+  					<div class="panel-body artist-container text-center">
+  						<img src="<%=artist.image_url %>" alt="<%=artist.name %>" class="img-responsive center-block">
+  						<h3 class="text-center"><%= artist.name %></h3>
+  						<%= link_to "Ver mas", artist, class: "btn btn-primary btn-block" %>
+  					</div>
+  				</div>
+			</div>
+		<% end %>
+	</div>
+</div>
