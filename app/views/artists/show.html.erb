@@ -1,0 +1,22 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<h1><%= @artist.name %></h1>
+			<h4>Albums <%= @artist.albums.count %></h4>
+			<% @artist.albums.each do |album|%>
+				<div class="col-md-4">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<img src="<%= album.image_url %>" alt="<%=album.name%>" class="img-responsive center-block">
+							<h3><%= album.name %></h3>
+							<span><%= album.released_at %></span>
+						</div>
+					</div>
+				</div>
+			<% end %>
+		</div>
+		<div class="col-md-4">
+			<img src="<%= @artist.image_url %>" alt="<%=@artist.name %>">
+		</div>
+	</div>
+</div>
